@@ -30,6 +30,13 @@ section {
 }
 
 /* YouTube thumbnail play overlay */
+/* Align Bootstrap Icons with Devicon icons in Skills */
+.col-auto .bi {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
 .video-thumb { width: 100%; }
 
 /* Fix: Bootstrap ratio child must be absolute */
