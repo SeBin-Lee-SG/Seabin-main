@@ -4,3 +4,14 @@
 .DS_Store
 **/.DS_Store
 .idea/
+
+# Reference CV (not mine)
+wj_cv/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

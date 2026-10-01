@@ -1,0 +1,212 @@
+%------------------------------------------------------------------------------
+% Resume in Latex for Seabin Lee - One Page Version with QR Code
+% (layout adapted from wonjong_cv.tex)
+%------------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage[top=0.3in, bottom=0.2in, left=0.5in, right=0.5in]{geometry}
+\usepackage[default]{sourcesanspro}
+\usepackage{anyfontsize}
+\usepackage{graphicx}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+\newcommand{\resumeItem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+% One-line entry (title + date), for Experience / Scholarships
+\newcommand{\resumeSingleLine}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+% Publication command with right-aligned year
+\newcommand{\resumePublicationWithYear}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \\
+    \end{tabular*}
+    #4 \vspace{-1pt}
+}
+\newcommand{\me}{\textbf{S. Lee}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\begin{document}
+% HEADING
+\begin{center}
+    \textbf{\Huge Seabin Lee} \\
+    \vspace{3pt}
+    \small \textit{Seoul, South Korea |
+      \href{https://sebin-lee-sg.github.io/Seabin-main/}{sebin-lee-sg.github.io/Seabin-main} |
+      \href{mailto:123sebin@naver.com}{123sebin@naver.com} |
+      \href{https://scholar.google.com/citations?user=ICTSngcAAAAJ&hl=en}{Google Scholar} |
+      \href{https://github.com/SeBin-Lee-SG}{GitHub}}
+\end{center}
+% QR CODE - positioned at top right (links to portfolio site)
+\vspace{-60pt}
+\hfill\href{https://sebin-lee-sg.github.io/Seabin-main/}{\includegraphics[width=2cm]{../photos/QR.png}}
+\vspace{0pt}
+% PROFESSIONAL SUMMARY
+\vspace{-15pt}
+\section{Professional Summary}
+\vspace{-2pt}
+Robotics researcher specializing in large-scale \textbf{Multi-Robot Task Allocation (MRTA)} for \textbf{Multi-Robot Systems}, spanning both multi-mobile-robot and multi-manipulator platforms. Also working on \textbf{Multi-Agent Path Finding (MAPF)} and \textbf{Human-Robot Interaction (HRI)} for scalable coordination and supervision, and on building simulation environments that combine real-time interaction, visualization, and robot behavior modeling.
+\vspace{-6pt}
+% EDUCATION
+\section{Education}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+    % TODO: verify start/end months; add GPA if you want it shown
+    \resumeSubheading
+      {Sogang University}{Seoul, South Korea}
+      {Ph.D. in Electronic Engineering (Advisor: Prof. Changjoo Nam)}{Mar 2024 -- Present}
+    \vspace{-2pt}
+    \resumeSubheading
+      {Sogang University}{Seoul, South Korea}
+      {M.S. in Electronic Engineering (Advisor: Prof. Changjoo Nam)}{Mar 2022 -- Feb 2024}
+    \vspace{-2pt}
+    \resumeSubheading
+      {Sogang University}{Seoul, South Korea}
+      {B.S. in Electronic Engineering}{Mar 2016 -- Feb 2022}
+\resumeSubHeadingListEnd
+\vspace{-7pt}
+% PUBLICATIONS
+\section{Publications}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+    \resumePublicationWithYear
+      {\begin{tabular}{@{}l@{}}\href{https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2706905}{Enhancing Situation Awareness in Multi-Robot Supervision: The Role of Adaptive} \\ \href{https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2706905}{Interfaces for Multiple Displays}\end{tabular}}
+      {2026}
+      {Int. Journal of Human-Computer Interaction (IJHCI) | S. Park, \me, S. Park, C. Nam | Published}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {\href{https://www.sciencedirect.com/science/article/pii/S0921889025002234}{Very Large-Scale Multi-Robot Task Allocation in Challenging Environments via Robot Redistribution}}
+      {2025}
+      {Robotics and Autonomous Systems (RAS) | \me, J. Sim, C. Nam | Published | \href{https://github.com/SeBin-Lee-SG/MRTA-RM_public}{\ul{Code}}}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {\href{https://ieeexplore.ieee.org/document/10342179}{Coordination of Multiple Mobile Manipulators for Ordered Sorting of Cluttered Objects}}
+      {2023}
+      {IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | J. Ahn, \me, C. Nam | Published}
+      {}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+% PREPRINTS
+\section{Preprints \& Under Review}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+    % TODO: update venue/status (was "RA-L, Submitted" in Wonjong's CV; now on arXiv)
+    \resumePublicationWithYear
+      {\begin{tabular}{@{}l@{}}\href{https://arxiv.org/abs/2606.25404}{HEART: Coordination of Heterogeneous Expert Agents for Physically Grounded} \\ \href{https://arxiv.org/abs/2606.25404}{Robotic Task Planning}\end{tabular}}
+      {2026}
+      {arXiv:2606.25404 | J. Lee*, \me*, W. Lee, N. Kim, M. Kang, C. Nam | Under Review}
+      {}
+    \vspace{-5pt}
+    % TODO: update venue/status (was "T-ASE, Submitted" in Wonjong's CV)
+    \resumePublicationWithYear
+      {\href{https://arxiv.org/abs/2509.13731}{Reinforcement Learning for Robotic Insertion of Flexible Cables in Industrial Settings}}
+      {2025}
+      {arXiv:2509.13731 | J. Park, \me, C. Park, W. Lee, C. Nam | Under Review}
+      {}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+% DOMESTIC CONFERENCES
+\section{Domestic Conferences}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+    % TODO: check the society's official English name
+    \resumePublicationWithYear
+      {Task Allocation Considering Movement Paths of Multiple Autonomous Vehicles (in Korean)}
+      {2023}
+      {Summer Conf. of the Korea ICT Platform Society | \me, C. Nam}
+      {}
+\resumeSubHeadingListEnd
+% RESEARCH IN PROGRESS
+\vspace{-10pt}
+\section{Research in Progress}
+\vspace{-2pt}
+% TODO: the website cards say "Coming soon" -- the one-line descriptions below are
+% inferred from the project titles; replace with your own wording
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Human-Factor-Aware Multi-Robot Supervision Task Allocation}{Ongoing}
+      {Multi-robot supervision, human factors}{}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Allocating tasks across a robot fleet while accounting for the human supervisor's workload and attention}
+    \resumeItemListEnd
+    \vspace{-2pt}
+    \resumeSubheading
+      {Task Allocation and Path Planning for Multi-Manipulator Systems}{Ongoing}
+      {Multi-manipulator coordination}{}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Joint task allocation and collision-free motion planning for multiple manipulators sharing a workspace}
+    \resumeItemListEnd
+    \vspace{-2pt}
+    \resumeSubheading
+      {Online MAPD in Multi-Floor Buildings with Elevators}{Ongoing}
+      {Multi-Agent Pickup and Delivery}{}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Online task assignment and path planning for robots that move between floors using shared elevators}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-7pt}
+% EXPERIENCE
+\section{Experience}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+    % TODO: verify dates; add TA / military service / internships if applicable, e.g.
+    % \resumeSingleLine{Teaching Assistant, Sogang University}{Mar 20XX -- Feb 20XX}
+    % \resumeSingleLine{Military Service, Republic of Korea Army}{20XX -- 20XX}
+    \resumeSingleLine{Graduate Researcher, AI Robotics Lab (AIRLAB), Sogang University}{Mar 2022 -- Present}
+\resumeSubHeadingListEnd
+\vspace{-7pt}
+% SKILLS
+\section{Skills}
+\vspace{-2pt}
+\textbf{Languages:} Python, C++, C\# \quad
+\textbf{Simulation \& Robotics:} Isaac Sim, cuRobo, Unity, Blender \quad
+\textbf{Tools:} Linux, Git
+% SCHOLARSHIPS
+% TODO: fill in and uncomment
+% \section{Scholarships \& Awards}
+% \vspace{-2pt}
+% \resumeSubHeadingListStart
+%     \resumeSingleLine{Scholarship name}{Mon 20XX -- Mon 20XX}
+% \resumeSubHeadingListEnd
+\end{document}
