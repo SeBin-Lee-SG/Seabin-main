@@ -19,6 +19,7 @@
 \usepackage[default]{sourcesanspro}
 \usepackage{anyfontsize}
 \usepackage{graphicx}
+\usepackage{needspace}
 \input{glyphtounicode}
 \pdfgentounicode=1
 \pagestyle{fancy}
@@ -41,6 +42,8 @@
       \textit{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-5pt}
 }
+% Project entry: moves to the next page instead of splitting from its bullets
+\newcommand{\resumeProject}[4]{\needspace{6\baselineskip}\resumeSubheading{#1}{#2}{#3}{#4}}
 % One-line entry (title + date), for Experience / Scholarships
 \newcommand{\resumeSingleLine}[2]{
   \item
@@ -81,13 +84,12 @@
 \vspace{-15pt}
 \section{Professional Summary}
 \vspace{-2pt}
-Robotics researcher specializing in large-scale \textbf{Multi-Robot Task Allocation (MRTA)} for \textbf{Multi-Robot Systems}, spanning both multi-mobile-robot and multi-manipulator platforms. Also working on \textbf{Multi-Agent Path Finding (MAPF)} and \textbf{Human-Robot Interaction (HRI)} for scalable coordination and supervision, and on building simulation environments that combine real-time interaction, visualization, and robot behavior modeling.
+Robotics researcher specializing in large-scale \textbf{Multi-Robot Task Allocation (MRTA)} across multi-mobile-robot and multi-manipulator systems, with work on \textbf{Multi-Agent Path Finding (MAPF)} and \textbf{Human-Robot Interaction (HRI)} for scalable coordination and supervision. Project manager of funded research projects with ETRI, Hyundai Motor Group, and Doolim-Yaskawa.
 \vspace{-6pt}
 % EDUCATION
 \section{Education}
 \vspace{-2pt}
 \resumeSubHeadingListStart
-    % TODO: verify start/end months; add GPA if you want it shown
     \resumeSubheading
       {Sogang University}{Seoul, South Korea}
       {Ph.D. in Electronic Engineering (Advisor: Prof. Changjoo Nam)}{Mar 2024 -- Present}
@@ -125,88 +127,135 @@ Robotics researcher specializing in large-scale \textbf{Multi-Robot Task Allocat
 \resumeSubHeadingListEnd
 \vspace{-12pt}
 % PREPRINTS
-\section{Preprints \& Under Review}
+\section[Preprints \& Under Review]{Preprints \& Under Review \hfill {\small\normalfont\textit{* Equal contribution}}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
-    % TODO: update venue/status (was "RA-L, Submitted" in Wonjong's CV; now on arXiv)
+    % TODO: add arXiv link once it is listed (submitted Oct 1, 2026)
+    \resumePublicationWithYear
+      {Real-Time Human-Adaptive Task Allocation for Multi-Human Multi-Robot Supervision}
+      {2026}
+      {IEEE Trans. on Human-Machine Systems (T-HMS) | \me*, S. Park*, N. Kim, S. Park, H. Jung, C. Nam | Under Review}
+      {}
+    \vspace{-5pt}
     \resumePublicationWithYear
       {\begin{tabular}{@{}l@{}}\href{https://arxiv.org/abs/2606.25404}{HEART: Coordination of Heterogeneous Expert Agents for Physically Grounded} \\ \href{https://arxiv.org/abs/2606.25404}{Robotic Task Planning}\end{tabular}}
       {2026}
-      {arXiv:2606.25404 | J. Lee*, \me*, W. Lee, N. Kim, M. Kang, C. Nam | Under Review}
+      {IEEE Robotics and Automation Letters (RA-L) | J. Lee*, \me*, W. Lee, N. Kim, M. Kang, C. Nam | Under Review | \href{https://arxiv.org/abs/2606.25404}{\ul{arXiv}}}
       {}
     \vspace{-5pt}
-    % TODO: update venue/status (was "T-ASE, Submitted" in Wonjong's CV)
     \resumePublicationWithYear
       {\href{https://arxiv.org/abs/2509.13731}{Reinforcement Learning for Robotic Insertion of Flexible Cables in Industrial Settings}}
       {2025}
-      {arXiv:2509.13731 | J. Park, \me, C. Park, W. Lee, C. Nam | Under Review}
+      {IEEE Trans. on Automation Science and Engineering (T-ASE) | J. Park, \me, C. Park, W. Lee, C. Nam | Under Review | \href{https://arxiv.org/abs/2509.13731}{\ul{arXiv}}}
       {}
 \resumeSubHeadingListEnd
 \vspace{-12pt}
-% DOMESTIC CONFERENCES
-\section{Domestic Conferences}
+% PATENTS
+\section{Patents}
 \vspace{-2pt}
 \resumeSubHeadingListStart
-    % TODO: check the society's official English name
     \resumePublicationWithYear
-      {Task Allocation Considering Movement Paths of Multiple Autonomous Vehicles (in Korean)}
-      {2023}
-      {Summer Conf. of the Korea ICT Platform Society | \me, C. Nam}
+      {Object Classification Method}
+      {Granted}
+      {KR Patent No. 10-2917098 | Registered Jan 20, 2026}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {Real-Time Human-Adaptive Task Allocation for Multi-Human Multi-Robot Supervision}
+      {Pending}
+      {KR Application No. 10-2026-0048896 | Filed Mar 18, 2026}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {Coordination of Heterogeneous Expert Agents for Physically Grounded Robotic Task Planning}
+      {Pending}
+      {KR Application No. 10-2026-0048897 | Filed Mar 18, 2026}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {Multi-Robot Task Allocation Method}
+      {Pending}
+      {KR Application No. 10-2025-0140923 | Filed Sep 29, 2025}
+      {}
+    \vspace{-5pt}
+    \resumePublicationWithYear
+      {Task Allocation Method, System and Program for Multi-Robot Considering Movement Path}
+      {Pending}
+      {KR Application No. 10-2024-0100528 | Filed Jul 29, 2024}
       {}
 \resumeSubHeadingListEnd
-% RESEARCH IN PROGRESS
-\vspace{-10pt}
-\section{Research in Progress}
+% RESEARCH PROJECTS (ordered by start date, earliest first)
+\vspace{-5pt}
+\section{Research Projects}
 \vspace{-2pt}
-% TODO: the website cards say "Coming soon" -- the one-line descriptions below are
-% inferred from the project titles; replace with your own wording
 \resumeSubHeadingListStart
-    \resumeSubheading
-      {Human-Factor-Aware Multi-Robot Supervision Task Allocation}{Ongoing}
-      {Multi-robot supervision, human factors}{}
+    \resumeProject
+      {\begin{tabular}[t]{@{}l@{}}Development of a Continual Intelligence-enhancing RaaS Framework \\ based on Human-Robot Shared Control\end{tabular}}{Jul 2024 -- Present}
+      {Government project, led by ETRI}{Project Manager}
     \vspace{-3pt}
     \resumeItemListStart
-        \resumeItem{Allocating tasks across a robot fleet while accounting for the human supervisor's workload and attention}
+        \resumeItem{Developed robot control task allocation algorithms considering human factors of remote operators}
+        \resumeItem{Constructed a simulation-based testbed using physics-based dynamics}
+        \resumeItem{Collected and analyzed human factor data through VR-integrated experiments}
     \resumeItemListEnd
     \vspace{-2pt}
-    \resumeSubheading
-      {Task Allocation and Path Planning for Multi-Manipulator Systems}{Ongoing}
-      {Multi-manipulator coordination}{}
+    \resumeProject
+      {\begin{tabular}[t]{@{}l@{}}Development of Harmonic-space Operation using Seamless Information Sharing \\ among Large-scale Heterogeneous Vehicles\end{tabular}}{Jul 2024 -- Present}
+      {Government project, led by KETI}{}
     \vspace{-3pt}
     \resumeItemListStart
-        \resumeItem{Joint task allocation and collision-free motion planning for multiple manipulators sharing a workspace}
+        \resumeItem{Developing cooperative task allocation optimization for multiple vehicles considering mission and spatial information and vehicle-specific characteristics}
     \resumeItemListEnd
     \vspace{-2pt}
-    \resumeSubheading
-      {Online MAPD in Multi-Floor Buildings with Elevators}{Ongoing}
-      {Multi-Agent Pickup and Delivery}{}
+    \resumeProject
+      {Multi-Manipulator Task Allocation for Defect Grinding}{Apr 2025 -- Sep 2025}
+      {Industry project, Doolim-Yaskawa}{Project Manager}
     \vspace{-3pt}
     \resumeItemListStart
-        \resumeItem{Online task assignment and path planning for robots that move between floors using shared elevators}
+        \resumeItem{Developed sanding task allocation algorithms while mitigating interference between multiple robot manipulators}
+    \resumeItemListEnd
+    \vspace{-2pt}
+    \resumeProject
+      {General-Purpose Robotic Task and Motion Generation Software Platform}{Oct 2025 -- Present}
+      {Industry project, Samsung Electronics}{}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Building a multi-agent-based, general-purpose software platform that generates and manages task plans and motions for individual and joint tasks on heterogeneous robot hardware}
+        \resumeItem{Developing task allocation algorithms for the platform's task planning, task execution, and autonomous learning processes}
+    \resumeItemListEnd
+    \vspace{-2pt}
+    \resumeProject
+      {Development of Multi-Robot Task Allocation Algorithms for Efficient Robotic Services}{Dec 2025 -- Present}
+      {Industry project, Hyundai Motor Group Robotics LAB}{Project Manager}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Developing task allocation algorithms for multi-robot delivery operations in multi-story buildings with elevator integration}
+    \resumeItemListEnd
+    \vspace{-2pt}
+    \resumeProject
+      {\begin{tabular}[t]{@{}l@{}}Development of Autonomous Task Distribution and Physical Collaboration Framework \\ for Multiple Heterogeneous Humanoid Robots\end{tabular}}{Apr 2026 -- Present}
+      {Government project, led by KIST}{}
+    \vspace{-3pt}
+    \resumeItemListStart
+        \resumeItem{Developing mission planning and task distribution techniques for multiple humanoid robots}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-7pt}
-% EXPERIENCE
-\section{Experience}
+% HONORS & AWARDS
+\section{Honors \& Awards}
 \vspace{-2pt}
 \resumeSubHeadingListStart
-    % TODO: verify dates; add TA / military service / internships if applicable, e.g.
-    % \resumeSingleLine{Teaching Assistant, Sogang University}{Mar 20XX -- Feb 20XX}
-    % \resumeSingleLine{Military Service, Republic of Korea Army}{20XX -- 20XX}
-    \resumeSingleLine{Graduate Researcher, AI Robotics Lab (AIRLAB), Sogang University}{Mar 2022 -- Present}
+    % 2025 서강전자논문대전 최우수 (BK21 FOUR scholarship)
+    \resumeSubheading
+      {Best Paper Award (Grand Prize), 2025 Sogang Electronic Engineering Paper Competition}{Nov 2025}
+      {Dept. of Electronic Engineering, Sogang University (BK21 FOUR) | Awarded for the RAS 2025 first-author paper}{}
 \resumeSubHeadingListEnd
 \vspace{-7pt}
-% SKILLS
-\section{Skills}
+% SKILLS & ADDITIONAL INFORMATION
+\section{Skills \& Additional Information}
 \vspace{-2pt}
 \textbf{Languages:} Python, C++, C\# \quad
 \textbf{Simulation \& Robotics:} Isaac Sim, cuRobo, Unity, Blender \quad
-\textbf{Tools:} Linux, Git
-% SCHOLARSHIPS
-% TODO: fill in and uncomment
-% \section{Scholarships \& Awards}
-% \vspace{-2pt}
-% \resumeSubHeadingListStart
-%     \resumeSingleLine{Scholarship name}{Mon 20XX -- Mon 20XX}
-% \resumeSubHeadingListEnd
+\textbf{Tools:} Linux, Git \\
+\textbf{Additional:} Completed mandatory military service | No restrictions on overseas travel
 \end{document}
